@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://img.freepik.com/free-vector/travel-time-typography-design_1308-84740.jpg?w=740&t=st=1687882618~exp=1687883218~hmac=2d58a998b9ca046758a41ea1807b035e99e6cadb070ddbfc1748d688d3be84e6);
+            background-repeat: no-repeat;
+            background-size: 1200px;
+            background-position: 100px 0px;
+        }
+        #aa,#ab,#ac,#ad,#ae,#af{
+            position: relative;
+            left: 180px;
+            top: 50px;
+            padding-right: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <form action=""><h1>Welcome to Flight Tickets booking portal !!!</h1>
+    <select name="" id="aa" onclick="f1()">
+    <option value="">From</option>
+    <option value="Hyderabad" id="hyd">Hyderabad</option>
+    <option value="Australia" id="aus">Australia</option>
+    <option value="U.S.A" id="usa">U.S.A</option>
+   </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <select name="" id="ab" onclick="f2()">
+    <option value="">To</option>
+    <option value="Hyderabad" id="ta1">Hyderabad</option>
+    <option value="Australia" id="ta2">Australia</option>
+    <option value="U.S.A" id="ta3">U.S.A</option>
+   </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="date" placeholder="Departure" id="ac">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="date"  placeholder="return" id="ad">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="number" min="1" max="5" placeholder="count" id="ae">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button id="af">Search</button></form>
+</body>
+<script>
+    function f1()
+    {
+        f=document.getElementById('aa').value
+        if(f=="Hyderabad")
+        {
+        f=document.getElementById('aa').value
+        sessionStorage.setItem('from',f)
+        }
+        if(f=="Australia")
+        {
+        f=document.getElementById('aa').value
+        sessionStorage.setItem('from',f)
+        }
+        if(f=="U.S.A")
+        {
+        f=document.getElementById('aa').value
+        sessionStorage.setItem('from',f)
+        }
+    }  
+    function f2()
+    {
+        f=document.getElementById('ab').value
+        if(f=="Hyderabad")
+        {
+        f=document.getElementById('ab').value
+        sessionStorage.setItem('to',f)
+        }
+        if(f=="Australia")
+        {
+        f=document.getElementById('ab').value
+        sessionStorage.setItem('to',f)
+        }
+        if(f=="U.S.A")
+        {
+        f=document.getElementById('ab').value
+        sessionStorage.setItem('to',f)
+        }
+    }  
+    f=document.querySelector('button')
+    f.addEventListener('click', ()=>
+    {
+        z=document.getElementById('ac').value
+        x=document.getElementById('ad').value
+        y=document.getElementById('ae').value
+        sessionStorage.setItem('Departure',z)
+        sessionStorage.setItem('return',x)
+        sessionStorage.setItem('count',y)
+
+        if (aa!="" && ab!="" && z!="" && x!="" && y!="" && y<=5)
+        {
+            window.open("finalmock01.html")
+        }
+        else
+        {
+            window.alert("enter all credentials")
+        }
+    })
+</script>
+</html>
